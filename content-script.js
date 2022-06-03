@@ -16,11 +16,47 @@ const interactions = [
   {
     startTime: 0,
     endTime: 700,
-    xi: 0.3,
-    xf: 0.7,
-    yi: 0.9,
-    yf: 1,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1KelIuHTV21x-nzbc9TYupZBsxUUzvjHIIelHuXYiECjax-xM70t_UpCmP5pzraGxhE&usqp=CAU"
+    xi: 0.374,
+    xf: 0.392,
+    yi: 0.905,
+    yf: 0.937,
+    image: "https://i.imgur.com/GFk0ND9.png"
+  },
+  {
+    startTime: 0,
+    endTime: 700,
+    xi: 0.474,
+    xf: 0.392,
+    yi: 0.905,
+    yf: 0.937,
+    image: "https://i.imgur.com/mB4WSOZ.png"
+  },
+  {
+    startTime: 0,
+    endTime: 700,
+    xi: 0.574,
+    xf: 0.392,
+    yi: 0.905,
+    yf: 0.937,
+    image: "https://i.imgur.com/jW9HS8x.png"
+  },
+  {
+    startTime: 0,
+    endTime: 700,
+    xi: 0.674,
+    xf: 0.392,
+    yi: 0.905,
+    yf: 0.937,
+    image: "https://i.imgur.com/e59PQeV.png"
+  },
+  {
+    startTime: 0,
+    endTime: 700,
+    xi: 0.774,
+    xf: 0.392,
+    yi: 0.905,
+    yf: 0.937,
+    image: "https://i.imgur.com/TZlYd90.png"
   }
 ]
 
@@ -30,6 +66,7 @@ videoContainer.addEventListener('mousemove', (event) => {
     if (!(videoElement.currentTime >= int.startTime) || !(videoElement.currentTime <= int.endTime)) continue
     const pointerX = event.clientX / videoContainer.clientWidth
     const pointerY = event.clientY / videoContainer.clientHeight
+    console.log(pointerX, pointerY)
     if(!(pointerX >= int.xi) || !(pointerX <= int.xf)) continue
     if(!(pointerY >= int.yi) || !(pointerY <= int.yf)) continue
     imageElement.src = int.image
