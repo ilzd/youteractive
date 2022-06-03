@@ -25,37 +25,37 @@ const interactions = [
   {
     startTime: 0,
     endTime: 700,
-    xi: 0.474,
-    xf: 0.392,
-    yi: 0.905,
-    yf: 0.937,
+    xi: 0.399,
+    xf: 0.426,
+    yi: 0.899,
+    yf: 0.945,
     image: "https://i.imgur.com/mB4WSOZ.png"
   },
   {
     startTime: 0,
     endTime: 700,
-    xi: 0.574,
-    xf: 0.392,
-    yi: 0.905,
-    yf: 0.937,
+    xi: 0.428,
+    xf: 0.454,
+    yi: 0.899,
+    yf: 0.945,
     image: "https://i.imgur.com/jW9HS8x.png"
   },
   {
     startTime: 0,
     endTime: 700,
-    xi: 0.674,
-    xf: 0.392,
-    yi: 0.905,
-    yf: 0.937,
+    xi: 0.456,
+    xf: 0.482,
+    yi: 0.899,
+    yf: 0.945,
     image: "https://i.imgur.com/e59PQeV.png"
   },
   {
     startTime: 0,
     endTime: 700,
-    xi: 0.774,
-    xf: 0.392,
-    yi: 0.905,
-    yf: 0.937,
+    xi: 0.486,
+    xf: 0.511,
+    yi: 0.899,
+    yf: 0.945,
     image: "https://i.imgur.com/TZlYd90.png"
   }
 ]
