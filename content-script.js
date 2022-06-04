@@ -3,14 +3,13 @@ const videoElement = document.querySelector('.html5-video-container video');
 const videoContainer = videoDiv.parentElement
 const imageElement = document.createElement('img')
 
-console.log(videoContainer)
-
 imageElement.style.display = 'none'
-imageElement.style.position = 'fixed'
-imageElement.style.top = '100px'
-imageElement.style.left = '100px'
+imageElement.style.position = 'relative'
+imageElement.style.top = '25px'
+imageElement.style.left = '25px'
+imageElement.style.zIndex = 100
 
-document.body.appendChild(imageElement)
+videoContainer.appendChild(imageElement)
 
 const interactions = [
   {
@@ -61,21 +60,20 @@ const interactions = [
 ]
 
 videoContainer.addEventListener('mousemove', (event) => {
+  const rect = videoContainer.getBoundingClientRect()
+  const offsetX = (videoContainer.clientWidth - videoElement.clientWidth) / 2
+  const offsetY = (videoContainer.clientHeight - videoElement.clientHeight) / 2
+  const pointerX = (event.clientX - rect.left - offsetX) / videoElement.clientWidth
+  const pointerY = (event.clientY - rect.top - offsetY) / videoElement.clientHeight
   let found = false
   for(let int of interactions) {
     if (!(videoElement.currentTime >= int.startTime) || !(videoElement.currentTime <= int.endTime)) continue
-    const pointerX = event.clientX / videoContainer.clientWidth
-    const pointerY = event.clientY / videoContainer.clientHeight
-    console.log(pointerX, pointerY)
     if(!(pointerX >= int.xi) || !(pointerX <= int.xf)) continue
     if(!(pointerY >= int.yi) || !(pointerY <= int.yf)) continue
     imageElement.src = int.image
     found = true
     break
   }
-  if(found) {
-    imageElement.style.display = 'block'
-  } else {
-    imageElement.style.display = 'none'
-  }
+
+  imageElement.style.display = found ? 'block' : 'none'
 })

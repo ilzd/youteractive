@@ -1,6 +1,6 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "name": "Youteractire",
+  "description": "Pointer interactions for Youtube videos",
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [
